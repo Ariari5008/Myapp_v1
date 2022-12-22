@@ -1,0 +1,27 @@
+{{define "content"}}
+<br>
+<div class="lead">編集フォーム</div>
+<br>
+<form role="form" action="/topics/update/{{.ID}}" method="post">
+  {{$res := index .TemplateData.Data "validation"}}
+  <div class="form-group text-left">
+    <label class="form-label">編集</label>
+    {{with .TemplateData.Form.Errors.Get "content"}}
+    <label class="text-danger">
+      <div class="text-left">{{.}}</div>
+    </label>
+    {{end}}
+    <textarea class="form-control" name="content" id="content" placeholder="Topicを更新" rows="4">{{$res.Content}}</textarea>
+    <input class="form-control" name="topic_id" id="topic_id" placeholder="topic_id" value="{{.ID}}" hidden>
+    <br>
+    <br>
+  </div>
+  {{if eq .TimerDone false}}
+  <p>時間が設定されているため更新できません</p>
+  {{else}}
+  <button class="btn btn-lg btn-primary pull-right" type="submit">更新</button>
+  {{end}}
+</form>
+<br>
+<p>[<a href="/topics">戻る</a>]</p>
+{{end}}

@@ -1,0 +1,74 @@
+{{define "content"}}
+<br>
+<div class="form-group">
+    <p>Myユーザーネーム:{{.User.Name}}</p>
+    <h1>コメントページ</h1>
+    <br>
+    <hr>
+    <h5 class="display-5"><label for="topic" class="form-label">内容</label></h5>
+    <textarea type="text" readonly class="form-control-plaintext" id="topic" name="topic"
+        rows="2">{{.Content}}</textarea>
+    <p class="text-right">
+        <span class="badge rounded-pill bg-light text-dark text-muted">ユーザーネーム:{{.Name}}</span>
+    </p>
+</div>
+<hr>
+<br>
+{{if or (eq .Del_flag 1) (.CommentDel_flag)}}
+{{if not .CommentDel_flag}}
+<form role="form" action="/topics/comment_save/{{.ID}}" method="post">
+    <div class="form-group text-left">
+        {{$res := index .TemplateData.Data "validation"}}
+        <label for="comment" class="form-label">コメント投稿</label>
+        {{with .TemplateData.Form.Errors.Get "comment"}}
+        <label class="text-danger">
+            <div>{{.}}</div>
+        </label>
+        {{end}}
+        <textarea class="form-control" name="comment" id="comment" rows="2">{{$res}}</textarea>
+        <input type="hidden" name="NewOrOld" value="{{.Sort}}">
+        <br>
+    </div>
+    <button type="submit" class="btn btn-info">投稿</button>
+    <br>
+    <br>
+</form>
+<br>
+<br>
+<div class="text-right">
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <form action="/topics/comment/{{.ID}}" method="post">
+            <input type="hidden" name="old" value="old" autocomplete="off">
+            <button type="submit" class="btn btn-outline-primary" >古い順</button>
+        </form>
+        <form action="/topics/comment/{{.ID}}" method="post">
+            <input type="hidden" name="new" value="new" autocomplete="off">
+            <button type="submit" class="btn btn-outline-primary">新しい順</button>
+        </form>
+    </div>
+    <span class="badge rounded-pill bg-light text-dark">{{.Sort}}</span>
+</div>
+{{end}}
+<br>
+<div class="form-group">
+    <h5>過去のコメント</h5>
+    {{if not .Comments}}
+    <br>
+    <p>投稿はされていません</p>
+    {{end}}
+    {{range .Comments}}
+    <hr>
+    <p>{{.Content}}</p>
+    <p class="text-right">
+        <span class="badge rounded-pill bg-light text-dark text-muted">ユーザーネーム:{{.Name}}</span>
+    </p>
+    {{end}}
+    {{else}}
+    <br>
+    <p>非公開になっています</p>
+    {{end}}
+    <div class="text-left"><a href="/">ホームページ</a></div>
+</div>
+<br>
+<br>
+{{end}}

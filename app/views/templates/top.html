@@ -1,0 +1,37 @@
+{{define "content"}}
+<br>
+<h1>トップページ</h1>
+<br>
+<br>
+<h3 class="text-left">過去の内容</h3>
+<br>
+{{if not .}}
+<p>投稿はされていません</p>
+{{end}}
+
+{{range .}}
+<hr>
+<form role="form" action="/browse/increment" method="post">
+  <div class="form-group">
+    <div class="mb-3 row">
+      <div class="col-sm-10">
+        <a href="/login"><textarea type="text" readonly class="form-control-plaintext" id="topic" name="topic"
+          rows="3">{{.Content}}</textarea></a>
+        <p class="text-right">
+          <span class="badge rounded-pill bg-light text-dark text-muted">ユーザーネーム:{{.Name}}</span>
+        </p>
+        <input class="form-control" name="topic_id" id="topic_id" placeholder="topic_id" value="{{.ID}}" hidden>
+        <input class="form-control" name="likes" id="likes" placeholder="likes" value="{{.Likes}}" hidden>
+      </div>
+    </div>
+  </div>
+  <h4><span name="likes" class="badge bg-info text-dark">&#128077;いいね数<span class="pl-2">{{.Likes}}</span></span></h4>
+    <br>
+    <br>
+</form>
+<div class="mb-3 row">
+  <div class="col-sm-10">
+  </div>
+</div>
+{{end}}
+{{end}}

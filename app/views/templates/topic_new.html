@@ -1,0 +1,21 @@
+{{define "content"}}
+<br>
+<div class="lead">作成フォーム</div>
+<br>
+<form role="form" action="/topics/topic_save" method="post">
+  <div class="form-group text-left">
+    <label class="form-label">作成</label>
+    {{with .TemplateData.Form.Errors.Get "content"}}
+    <label class="text-danger">
+      <div class="text-left">{{.}}</div>
+    </label>
+    {{end}}
+    <textarea class="form-control" name="content" id="content" placeholder="Topicを追加" rows="4" >{{.Content}}</textarea>
+    <br>
+    <br>
+  </div>
+  <button class="btn btn-lg btn-primary pull-right" type="submit">作成</button>
+</form>
+<br>
+<p>[<a href="/topics">戻る</a>]</p>
+{{end}}

@@ -1,0 +1,31 @@
+{{define "content"}}
+<br>
+<h2>ランキングページ</h2>
+
+<table class="basic table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ランキング</th>
+      <th scope="col">いいね数</th>
+      <th scope="col">名前</th>
+      <th scope="col">内容</th>
+    </tr>
+  </thead>
+  {{range .Topics}}
+  {{if eq .Del_flag 1}}
+  <tbody>
+    <tr>
+      <th scope="row">
+        {{if gt .Likes 4}}
+        &#128588;
+        {{end}}
+      </th>
+      <td>{{.Likes}}</td>
+      <td>{{.Name}}</td>
+      <td class="text-left">{{.Content}}</td>
+    </tr>
+  </tbody>
+  {{end}}
+  {{end}}
+</table>
+{{end}}

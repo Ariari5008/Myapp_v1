@@ -1,0 +1,9 @@
+table.basic {
+    counter-reset: ranking;  /* ※A */
+ }
+ table.basic tbody th:before {
+    counter-increment: ranking;         /* ※B */
+    content: counter(ranking) "位"; /* ※C */
+ }
+
+ 

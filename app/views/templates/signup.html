@@ -1,0 +1,43 @@
+{{define "content"}}
+<br>
+<h1 class="text-center">登録フォーム</h1>
+<div class="container text-left">
+  <form class="form-signin center" role="form" action="/signup" method="post">
+
+    {{$res := index .TemplateData.Data "validation"}}
+    <br>
+    <div class="mb-3">
+      <label class="form-label">名前</label>
+      {{with .TemplateData.Form.Errors.Get "name"}}
+      <label class="text-danger">
+        <div class="text-left">{{.}}</div>
+      </label>
+      {{end}}
+      <input class="form-control
+       {{with .TemplateData.Form.Errors.Get `name`}}
+       is-invalid {{end}}" type="text" name="name" autocomplete="off" value="{{$res.Name}}" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">メールアドレス</label>
+      {{with .TemplateData.Form.Errors.Get "email"}}
+      <label class="text-danger">{{.}}</label>
+      {{end}}
+      <input class="form-control
+       {{with .TemplateData.Form.Errors.Get `email`}}
+       is-invalid {{end}}" type="email" name="email" autocomplete="off" value="{{$res.Email}}" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">パスワード</label>
+      {{with .TemplateData.Form.Errors.Get "password"}}
+      <label class="text-danger">{{.}}</label>
+      {{end}}
+      <input class="form-control
+       {{with .TemplateData.Form.Errors.Get `password`}}
+       is-invalid {{end}}" type="password" name="password" autocomplete="off" value="{{$res.Password}}" required>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登録</button>
+    <br>
+  </form>
+</div>
+<a class="lead pull-right" href="/login">ログイン</a>
+{{end}}

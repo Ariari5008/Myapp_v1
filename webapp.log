@@ -24367,3 +24367,1704 @@ net/http.(*conn).serve(0xc0002b8000, {0x7ff67470be18, 0xc000179710})
 created by net/http.(*Server).Serve
 	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
 2022/12/22 18:30:14 topics.go:35: 8 values for 6 columns
+2022/12/22 20:58:21 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:166)
+2022/12/22 21:15:40 server.go:3197: http: panic serving 127.0.0.1:57352: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00025a390})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac1c0}, {0x7ff7860680c0, 0xc0002c0680}, {0xc000277860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac1c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0002ac1c0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac1c0}, 0xc00029a400)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000179860?}, {0x7ff78612a370, 0xc0002ac1c0}, 0xc00029a400)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00018dd60, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:15:40 server.go:3197: http: panic serving 127.0.0.1:57351: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00004a450})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001181c0}, {0x7ff7860680c0, 0xc00011dc80}, {0xc00009d860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0001181c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0001181c0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001181c0}, 0xc00029a000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000282030?}, {0x7ff78612a370, 0xc0001181c0}, 0xc00029a000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00018dcc0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:15:40 server.go:3197: http: panic serving 127.0.0.1:57353: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00025a8c0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001182a0}, {0x7ff7860680c0, 0xc00011df00}, {0xc000073860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0001182a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0001182a0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001182a0}, 0xc00005c300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00001ae40?}, {0x7ff78612a370, 0xc0001182a0}, 0xc00005c300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002de140, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:15:41 server.go:3197: http: panic serving 127.0.0.1:57354: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 32 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc0002867f0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac2a0}, {0x7ff7860680c0, 0xc0002c0880}, {0xc00009d860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac2a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0002ac2a0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac2a0}, 0xc00029a500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002ea0c0?}, {0x7ff78612a370, 0xc0002ac2a0}, 0xc00029a500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00018df40, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:15:41 server.go:3197: http: panic serving 127.0.0.1:57355: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 42 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000286af0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac380}, {0x7ff7860680c0, 0xc0002c0a00}, {0xc00009d860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0002ac380?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac380}, 0xc0000deb00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003ba600?}, {0x7ff78612a370, 0xc0002ac380}, 0xc0000deb00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002de1e0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:15:41 server.go:3197: http: panic serving 127.0.0.1:57356: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 49 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00004a660})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc000118380}, {0x7ff7860680c0, 0xc0003be280}, {0xc000073860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc000118380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc000118380?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc000118380}, 0xc0000dec00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003ba660?}, {0x7ff78612a370, 0xc000118380}, 0xc0000dec00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002de280, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:00 server.go:3197: http: panic serving 127.0.0.1:57357: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 11 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000287480})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac540}, {0x7ff7860680c0, 0xc0002c1500}, {0xc000363860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac540}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0002ac540?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac540}, 0xc00005cf00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002eb980?}, {0x7ff78612a370, 0xc0002ac540}, 0xc00005cf00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000348000, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:00 server.go:3197: http: panic serving 127.0.0.1:57368: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 16 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000287620})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac620}, {0x7ff7860680c0, 0xc0002c1700}, {0xc00009d860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac620}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0002ac620?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac620}, 0xc00029a700)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002eb9e0?}, {0x7ff78612a370, 0xc0002ac620}, 0xc00029a700)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003481e0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:00 server.go:3197: http: panic serving 127.0.0.1:57371: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 106 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00004a050})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac000}, {0x7ff7860680c0, 0xc000076100}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0002ac000?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac000}, 0xc00029a000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000434030?}, {0x7ff78612a370, 0xc0002ac000}, 0xc00029a000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000348000, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:01 server.go:3197: http: panic serving 127.0.0.1:57372: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 97 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000610100})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac0e0}, {0x7ff7860680c0, 0xc000076380}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac0e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0002ac0e0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac0e0}, 0xc0000de000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00036c0c0?}, {0x7ff78612a370, 0xc0002ac0e0}, 0xc0000de000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000a2000, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:01 server.go:3197: http: panic serving 127.0.0.1:57373: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 114 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000610370})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc000118000}, {0x7ff7860680c0, 0xc0002c0200}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc000118000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc000118000?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc000118000}, 0xc0000de100)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00036c120?}, {0x7ff78612a370, 0xc000118000}, 0xc0000de100)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000a2140, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:01 server.go:3197: http: panic serving 127.0.0.1:57374: template: login.html:23: bad character U+0060 '`' in action started at login.html:14
+goroutine 119 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000286750})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac1c0}, {0x7ff7860680c0, 0xc000076680}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac1c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0002ac1c0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac1c0}, 0xc0000de200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00036c660?}, {0x7ff78612a370, 0xc0002ac1c0}, 0xc0000de200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000a2280, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:35 server.go:3197: http: panic serving 127.0.0.1:57375: template: login.html:20: bad character U+0060 '`' in action started at login.html:11
+goroutine 124 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc0006106c0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0004e8000}, {0x7ff7860680c0, 0xc0003be380}, {0xc000131860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0004e8000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0004e8000?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0004e8000}, 0xc0000de500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000498cf0?}, {0x7ff78612a370, 0xc0004e8000}, 0xc0000de500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000a23c0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:35 server.go:3197: http: panic serving 127.0.0.1:57379: template: login.html:20: bad character U+0060 '`' in action started at login.html:11
+goroutine 129 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000287410})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac700}, {0x7ff7860680c0, 0xc000077700}, {0xc0001dd860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac700}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0002ac700?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac700}, 0xc000128300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000282180?}, {0x7ff78612a370, 0xc0002ac700}, 0xc000128300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000a2460, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:35 server.go:3197: http: panic serving 127.0.0.1:57381: template: login.html:20: bad character U+0060 '`' in action started at login.html:11
+goroutine 111 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00004a7d0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0004e80e0}, {0x7ff7860680c0, 0xc0003be600}, {0xc0001dd860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0004e80e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0004e80e0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0004e80e0}, 0xc00029a600)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002799e0?}, {0x7ff78612a370, 0xc0004e80e0}, 0xc00029a600)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000348280, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:36 server.go:3197: http: panic serving 127.0.0.1:57382: template: login.html:20: bad character U+0060 '`' in action started at login.html:11
+goroutine 164 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000287660})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001181c0}, {0x7ff7860680c0, 0xc0002c0700}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0001181c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0001181c0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001181c0}, 0xc000128500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000283050?}, {0x7ff78612a370, 0xc0001181c0}, 0xc000128500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000348320, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:36 server.go:3197: http: panic serving 127.0.0.1:57383: template: login.html:20: bad character U+0060 '`' in action started at login.html:11
+goroutine 147 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc000610830})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0002ac7e0}, {0x7ff7860680c0, 0xc000077980}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0002ac7e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0002ac7e0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0002ac7e0}, 0xc0000de700)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00001aed0?}, {0x7ff78612a370, 0xc0002ac7e0}, 0xc0000de700)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001525a0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:19:36 server.go:3197: http: panic serving 127.0.0.1:57384: template: login.html:20: bad character U+0060 '`' in action started at login.html:11
+goroutine 165 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00004aa90})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0004e81c0}, {0x7ff7860680c0, 0xc0003be900}, {0xc0000a1860?, 0x3, 0xc00023c490?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.login({0x7ff78612a370, 0xc0004e81c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_auth.go:105 +0x277
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0004e81c0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0004e81c0}, 0xc000128600)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002835f0?}, {0x7ff78612a370, 0xc0004e81c0}, 0xc000128600)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003483c0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:26:31 server.go:3197: http: panic serving 127.0.0.1:57385: template: browse.html:33: unexpected EOF
+goroutine 170 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00054e060})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc000118000}, {0x7ff786012de0, 0xc0004020f0}, {0xc00009d4e0?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.browse({0x7ff78612a370, 0xc000118000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_browse.go:57 +0x3cd
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc000118000?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc000118000}, 0xc000210800)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000283650?}, {0x7ff78612a370, 0xc000118000}, 0xc000210800)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000348460, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:26:31 server.go:3197: http: panic serving 127.0.0.1:57449: template: browse.html:33: unexpected EOF
+goroutine 573 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00054e140})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001181c0}, {0x7ff786012de0, 0xc0004022b8}, {0xc00009d4e0?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.browse({0x7ff78612a370, 0xc0001181c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_browse.go:57 +0x3cd
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0001181c0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001181c0}, 0xc000210000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002cc030?}, {0x7ff78612a370, 0xc0001181c0}, 0xc000210000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001520a0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:26:31 server.go:3197: http: panic serving 127.0.0.1:57450: template: browse.html:33: unexpected EOF
+goroutine 509 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00054e210})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001ce000}, {0x7ff786012de0, 0xc000612138}, {0xc0000a14e0?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.browse({0x7ff78612a370, 0xc0001ce000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_browse.go:57 +0x3cd
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0001ce000?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001ce000}, 0xc0001aa000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00015c150?}, {0x7ff78612a370, 0xc0001ce000}, 0xc0001aa000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000348000, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:26:33 server.go:3197: http: panic serving 127.0.0.1:57451: template: browse.html:33: unexpected EOF
+goroutine 510 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00054e400})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001ce0e0}, {0x7ff786012de0, 0xc000612300}, {0xc0000a14e0?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.browse({0x7ff78612a370, 0xc0001ce0e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_browse.go:57 +0x3cd
+net/http.HandlerFunc.ServeHTTP(0x16ab2f09ae8?, {0x7ff78612a370?, 0xc0001ce0e0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001ce0e0}, 0xc0000de400)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0006978f0?}, {0x7ff78612a370, 0xc0001ce0e0}, 0xc0000de400)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003480a0, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:26:33 server.go:3197: http: panic serving 127.0.0.1:57452: template: browse.html:33: unexpected EOF
+goroutine 832 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00025aa80})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001a8000}, {0x7ff786012de0, 0xc0002ba258}, {0xc0000a14e0?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.browse({0x7ff78612a370, 0xc0001a8000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_browse.go:57 +0x3cd
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0001a8000?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001a8000}, 0xc0001aa300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00015cd80?}, {0x7ff78612a370, 0xc0001a8000}, 0xc0001aa300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00018c000, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 21:26:33 server.go:3197: http: panic serving 127.0.0.1:57453: template: browse.html:33: unexpected EOF
+goroutine 899 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff786027aa0, 0xc00004a920})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff78612a370?, 0xc0001a80e0}, {0x7ff786012de0, 0xc0002ba360}, {0xc00009d4e0?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.browse({0x7ff78612a370, 0xc0001a80e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_browse.go:57 +0x3cd
+net/http.HandlerFunc.ServeHTTP(0x16ab2f099f8?, {0x7ff78612a370?, 0xc0001a80e0?}, 0x7ff785b7e7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff78612a370, 0xc0001a80e0}, 0xc0002da500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00036ca50?}, {0x7ff78612a370, 0xc0001a80e0}, 0xc0002da500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00018c140, {0x7ff78612a5f8, 0xc000179710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:41 server.go:3197: http: panic serving 127.0.0.1:57791: template: index.html:11: unexpected "}" in end
+goroutine 20 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0004b0410})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc00041e9a0}, {0x7ff7761980c0, 0xc000429800}, {0xc0000cf870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc00041e9a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc00041e9a0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc00041e9a0}, 0xc000407000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00001a060?}, {0x7ff77625a370, 0xc00041e9a0}, 0xc000407000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00020dcc0, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:41 server.go:3197: http: panic serving 127.0.0.1:57806: template: index.html:11: unexpected "}" in end
+goroutine 87 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0003ca110})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000727e0}, {0x7ff7761980c0, 0xc000079680}, {0xc00034d870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000727e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797041f8?, {0x7ff77625a370?, 0xc0000727e0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000727e0}, 0xc000068b00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00032df80?}, {0x7ff77625a370, 0xc0000727e0}, 0xc000068b00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000d4640, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:41 server.go:3197: http: panic serving 127.0.0.1:57807: template: index.html:11: unexpected "}" in end
+goroutine 91 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc00033c090})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc000198000}, {0x7ff7761980c0, 0xc0000c0200}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc000198000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797041f8?, {0x7ff77625a370?, 0xc000198000?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc000198000}, 0xc00015a000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003c4030?}, {0x7ff77625a370, 0xc000198000}, 0xc00015a000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00020c000, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:42 server.go:3197: http: panic serving 127.0.0.1:57808: template: index.html:11: unexpected "}" in end
+goroutine 92 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0003ca380})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc000072000}, {0x7ff7761980c0, 0xc000428300}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc000072000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797041f8?, {0x7ff77625a370?, 0xc000072000?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc000072000}, 0xc000068000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003440c0?}, {0x7ff77625a370, 0xc000072000}, 0xc000068000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00020c140, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:42 server.go:3197: http: panic serving 127.0.0.1:57809: template: index.html:11: unexpected "}" in end
+goroutine 115 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc00033c3b0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000c2000}, {0x7ff7761980c0, 0xc000078300}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000c2000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc0000c2000?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000c2000}, 0xc000406000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f8450?}, {0x7ff77625a370, 0xc0000c2000}, 0xc000406000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000d4000, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:42 server.go:3197: http: panic serving 127.0.0.1:57810: template: index.html:11: unexpected "}" in end
+goroutine 96 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc00033c6f0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000c20e0}, {0x7ff7761980c0, 0xc000078800}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000c20e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc0000c20e0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000c20e0}, 0xc000068100)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000344d50?}, {0x7ff77625a370, 0xc0000c20e0}, 0xc000068100)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00020c280, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:42 server.go:3197: http: panic serving 127.0.0.1:57811: template: index.html:11: unexpected "}" in end
+goroutine 120 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc00033c860})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000720e0}, {0x7ff7761980c0, 0xc000428680}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000720e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc0000720e0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000720e0}, 0xc000068200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00013dcb0?}, {0x7ff77625a370, 0xc0000720e0}, 0xc000068200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000d40a0, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:42 server.go:3197: http: panic serving 127.0.0.1:57812: template: index.html:11: unexpected "}" in end
+goroutine 133 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc00033cb00})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000c22a0}, {0x7ff7761980c0, 0xc000078c00}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000c22a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc0000c22a0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000c22a0}, 0xc000068300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003457d0?}, {0x7ff77625a370, 0xc0000c22a0}, 0xc000068300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00020c3c0, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:49 server.go:3197: http: panic serving 127.0.0.1:57813: template: index.html:11: unexpected "}" in end
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0004b0100})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000721c0}, {0x7ff7761980c0, 0xc000428a00}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000721c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc0000721c0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000721c0}, 0xc000068500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00008ca50?}, {0x7ff77625a370, 0xc0000721c0}, 0xc000068500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00011c000, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:49 server.go:3197: http: panic serving 127.0.0.1:57814: template: index.html:11: unexpected "}" in end
+goroutine 136 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0003caa70})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0002d6000}, {0x7ff7761980c0, 0xc000200380}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0002d6000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797041f8?, {0x7ff77625a370?, 0xc0002d6000?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0002d6000}, 0xc000068400)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000345b60?}, {0x7ff77625a370, 0xc0002d6000}, 0xc000068400)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00020c500, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:49 server.go:3197: http: panic serving 127.0.0.1:57815: template: index.html:11: unexpected "}" in end
+goroutine 162 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0002d8670})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0002d60e0}, {0x7ff7761980c0, 0xc000200600}, {0xc00030f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0002d60e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797041f8?, {0x7ff77625a370?, 0xc0002d60e0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0002d60e0}, 0xc000304000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00001aae0?}, {0x7ff77625a370, 0xc0002d60e0}, 0xc000304000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0000d4140, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:50 server.go:3197: http: panic serving 127.0.0.1:57816: template: index.html:11: unexpected "}" in end
+goroutine 151 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0002d8740})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0002d61c0}, {0x7ff7761980c0, 0xc000200900}, {0xc00030f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0002d61c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797041f8?, {0x7ff77625a370?, 0xc0002d61c0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0002d61c0}, 0xc000068600)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000404ae0?}, {0x7ff77625a370, 0xc0002d61c0}, 0xc000068600)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d20a0, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:50 server.go:3197: http: panic serving 127.0.0.1:57817: template: index.html:11: unexpected "}" in end
+goroutine 152 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0002d87e0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc0000722a0}, {0x7ff7761980c0, 0xc000428e00}, {0xc00030f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc0000722a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc0000722a0?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc0000722a0}, 0xc000068800)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000404b40?}, {0x7ff77625a370, 0xc0000722a0}, 0xc000068800)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d21e0, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:35:50 server.go:3197: http: panic serving 127.0.0.1:57818: template: index.html:11: unexpected "}" in end
+goroutine 158 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff776157aa0, 0xc0002d8970})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff77625a370?, 0xc000072380}, {0x7ff7761980c0, 0xc000429100}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff77625a370, 0xc000072380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x28c797042e8?, {0x7ff77625a370?, 0xc000072380?}, 0x7ff775cae7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff77625a370, 0xc000072380}, 0xc000068900)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004055c0?}, {0x7ff77625a370, 0xc000072380}, 0xc000068900)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001d2320, {0x7ff77625a5f8, 0xc0001f9710})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:03 server.go:3197: http: panic serving 127.0.0.1:57822: template: index.html:11: unexpected "}" in end
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000090360})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b4000}, {0x7ff7d6be80c0, 0xc0000b8280}, {0xc000069870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b4000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000b4000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b4000}, 0xc0000a0000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00008c030?}, {0x7ff7d6caa370, 0xc0000b4000}, 0xc0000a0000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025fcc0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:05 server.go:3197: http: panic serving 127.0.0.1:57823: template: index.html:11: unexpected "}" in end
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000090710})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b40e0}, {0x7ff7d6be80c0, 0xc0000b8680}, {0xc0003a7870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b40e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0000b40e0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b40e0}, 0xc000118700)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001a7830?}, {0x7ff7d6caa370, 0xc0000b40e0}, 0xc000118700)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000308000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:05 server.go:3197: http: panic serving 127.0.0.1:57824: template: index.html:11: unexpected "}" in end
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a060})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c1c0}, {0x7ff7d6be80c0, 0xc000151a80}, {0xc0003a7870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c1c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c1c0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c1c0}, 0xc0000a0200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00008cb70?}, {0x7ff7d6caa370, 0xc00014c1c0}, 0xc0000a0200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003080a0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:05 server.go:3197: http: panic serving 127.0.0.1:57825: template: index.html:11: unexpected "}" in end
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a3e0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00033a000}, {0x7ff7d6be80c0, 0xc000326380}, {0xc0003a7870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00033a000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00033a000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00033a000}, 0xc000118800)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00029a360?}, {0x7ff7d6caa370, 0xc00033a000}, 0xc000118800)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000308140, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:05 server.go:3197: http: panic serving 127.0.0.1:57826: template: index.html:11: unexpected "}" in end
+goroutine 26 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00028a5b0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b41c0}, {0x7ff7d6be80c0, 0xc0000b8a00}, {0xc00006d870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b41c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000b41c0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b41c0}, 0xc000118a00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00029a3c0?}, {0x7ff7d6caa370, 0xc0000b41c0}, 0xc000118a00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003ce000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:05 server.go:3197: http: panic serving 127.0.0.1:57827: template: index.html:11: unexpected "}" in end
+goroutine 15 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000090b10})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c380}, {0x7ff7d6be80c0, 0xc000151f00}, {0xc00006d870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c380?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c380}, 0xc0000a0300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00008df50?}, {0x7ff7d6caa370, 0xc00014c380}, 0xc0000a0300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025fd60, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:35 server.go:3197: http: panic serving 127.0.0.1:57832: template: index.html:11: unexpected "}" in end
+goroutine 51 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000091160})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b4460}, {0x7ff7d6be80c0, 0xc0000b8e80}, {0xc0003a7870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b4460}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000b4460?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b4460}, 0xc0000a0800)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e2570?}, {0x7ff7d6caa370, 0xc0000b4460}, 0xc0000a0800)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025fe00, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:35 server.go:3197: http: panic serving 127.0.0.1:57833: template: index.html:11: unexpected "}" in end
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0000914f0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b4540}, {0x7ff7d6be80c0, 0xc0000b9100}, {0xc0003a7870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b4540}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0000b4540?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b4540}, 0xc0000a0500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e25d0?}, {0x7ff7d6caa370, 0xc0000b4540}, 0xc0000a0500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003081e0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:35 server.go:3197: http: panic serving 127.0.0.1:57834: template: index.html:11: unexpected "}" in end
+goroutine 76 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00028a9a0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00033a1c0}, {0x7ff7d6be80c0, 0xc000326680}, {0xc000069870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00033a1c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00033a1c0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00033a1c0}, 0xc000358200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000305080?}, {0x7ff7d6caa370, 0xc00033a1c0}, 0xc000358200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003ce0a0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:36 server.go:3197: http: panic serving 127.0.0.1:57835: template: index.html:11: unexpected "}" in end
+goroutine 77 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a830})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b47e0}, {0x7ff7d6be80c0, 0xc0000b9680}, {0xc000435870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b47e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0000b47e0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b47e0}, 0xc000358300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00029bc20?}, {0x7ff7d6caa370, 0xc0000b47e0}, 0xc000358300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003ce140, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:36 server.go:3197: http: panic serving 127.0.0.1:57836: template: index.html:11: unexpected "}" in end
+goroutine 78 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00028a3c0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b4000}, {0x7ff7d6be80c0, 0xc0000b8200}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b4000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000b4000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b4000}, 0xc000118c00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00029bc80?}, {0x7ff7d6caa370, 0xc0000b4000}, 0xc000118c00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003ce1e0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:36 server.go:3197: http: panic serving 127.0.0.1:57837: template: index.html:11: unexpected "}" in end
+goroutine 102 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001ae180})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b40e0}, {0x7ff7d6be80c0, 0xc0000b8680}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b40e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f1400d0?, {0x7ff7d6caa370?, 0xc0000b40e0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b40e0}, 0xc0000a0000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000745d0?}, {0x7ff7d6caa370, 0xc0000b40e0}, 0xc0000a0000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003ce000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:37 server.go:3197: http: panic serving 127.0.0.1:57838: template: index.html:11: unexpected "}" in end
+goroutine 116 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001ae230})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000b41c0}, {0x7ff7d6be80c0, 0xc0000b8980}, {0xc00050b870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000b41c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000b41c0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000b41c0}, 0xc000358000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003052f0?}, {0x7ff7d6caa370, 0xc0000b41c0}, 0xc000358000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:38 server.go:3197: http: panic serving 127.0.0.1:57839: template: index.html:11: unexpected "}" in end
+goroutine 85 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00004ad30})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c000}, {0x7ff7d6be80c0, 0xc000326480}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00014c000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c000}, 0xc000358100)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000305950?}, {0x7ff7d6caa370, 0xc00014c000}, 0xc000358100)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:38 server.go:3197: http: panic serving 127.0.0.1:57840: template: index.html:11: unexpected "}" in end
+goroutine 87 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00004b0c0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000d6000}, {0x7ff7d6be80c0, 0xc000150380}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000d6000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000d6000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000d6000}, 0xc000118000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001a7260?}, {0x7ff7d6caa370, 0xc0000d6000}, 0xc000118000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e140, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:38 server.go:3197: http: panic serving 127.0.0.1:57841: template: index.html:11: unexpected "}" in end
+goroutine 92 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a260})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000d60e0}, {0x7ff7d6be80c0, 0xc000150700}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000d60e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000d60e0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000d60e0}, 0xc000118100)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e2120?}, {0x7ff7d6caa370, 0xc0000d60e0}, 0xc000118100)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e280, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:39 server.go:3197: http: panic serving 127.0.0.1:57842: template: index.html:11: unexpected "}" in end
+goroutine 121 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001ae640})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000d61c0}, {0x7ff7d6be80c0, 0xc000150980}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000d61c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000d61c0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000d61c0}, 0xc0000a0100)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e2210?}, {0x7ff7d6caa370, 0xc0000d61c0}, 0xc0000a0100)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e140, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:39 server.go:3197: http: panic serving 127.0.0.1:57843: template: index.html:11: unexpected "}" in end
+goroutine 123 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001ae9d0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c2a0}, {0x7ff7d6be80c0, 0xc000326880}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c2a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c2a0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c2a0}, 0xc0000a0200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00029b8f0?}, {0x7ff7d6caa370, 0xc00014c2a0}, 0xc0000a0200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e280, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:40 server.go:3197: http: panic serving 127.0.0.1:57844: template: index.html:11: unexpected "}" in end
+goroutine 131 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00004bb60})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000d6380}, {0x7ff7d6be80c0, 0xc000150d00}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000d6380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000d6380?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000d6380}, 0xc0000a0400)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00029baa0?}, {0x7ff7d6caa370, 0xc0000d6380}, 0xc0000a0400)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e3c0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:40 server.go:3197: http: panic serving 127.0.0.1:57845: template: index.html:11: unexpected "}" in end
+goroutine 132 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001aed60})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c380}, {0x7ff7d6be80c0, 0xc000326b80}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00014c380?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c380}, 0xc000118300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e3140?}, {0x7ff7d6caa370, 0xc00014c380}, 0xc000118300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e460, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:40 server.go:3197: http: panic serving 127.0.0.1:57846: template: index.html:11: unexpected "}" in end
+goroutine 64 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001aee10})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0004dc000}, {0x7ff7d6be80c0, 0xc0002ee500}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0004dc000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0004dc000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0004dc000}, 0xc000118400)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e3d40?}, {0x7ff7d6caa370, 0xc0004dc000}, 0xc000118400)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001840a0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:41 server.go:3197: http: panic serving 127.0.0.1:57847: template: index.html:11: unexpected "}" in end
+goroutine 138 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001aefa0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000d6460}, {0x7ff7d6be80c0, 0xc000151000}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000d6460}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0000d6460?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000d6460}, 0xc000118500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003e3ef0?}, {0x7ff7d6caa370, 0xc0000d6460}, 0xc000118500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e500, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:41 server.go:3197: http: panic serving 127.0.0.1:57848: template: index.html:11: unexpected "}" in end
+goroutine 148 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0001af330})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c460}, {0x7ff7d6be80c0, 0xc000326f00}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c460}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c460?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c460}, 0xc0000a0500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000418b40?}, {0x7ff7d6caa370, 0xc00014c460}, 0xc0000a0500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e3c0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:41 server.go:3197: http: panic serving 127.0.0.1:57849: template: index.html:11: unexpected "}" in end
+goroutine 141 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00004be40})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c540}, {0x7ff7d6be80c0, 0xc000327200}, {0xc0002d9870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c540}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c540?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c540}, 0xc000118700)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002230b0?}, {0x7ff7d6caa370, 0xc00014c540}, 0xc000118700)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e780, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:41 server.go:3197: http: panic serving 127.0.0.1:57850: template: index.html:11: unexpected "}" in end
+goroutine 142 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00004bf60})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c700}, {0x7ff7d6be80c0, 0xc000327500}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c700}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c700?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c700}, 0xc000118900)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002236e0?}, {0x7ff7d6caa370, 0xc00014c700}, 0xc000118900)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006edc0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:36:41 server.go:3197: http: panic serving 127.0.0.1:57851: template: index.html:11: unexpected "}" in end
+goroutine 144 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0000902f0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0000d6540}, {0x7ff7d6be80c0, 0xc000151280}, {0xc00050f870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0000d6540}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0000d6540?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0000d6540}, 0xc000118a00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000290090?}, {0x7ff7d6caa370, 0xc0000d6540}, 0xc000118a00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006ef00, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:19 server.go:3197: http: panic serving 127.0.0.1:57856: template: index.html:11: unexpected "}" in end
+goroutine 181 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a880})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014ca80}, {0x7ff7d6be80c0, 0xc000327d80}, {0xc0004ed870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014ca80}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014ca80?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014ca80}, 0xc000118f00)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002900f0?}, {0x7ff7d6caa370, 0xc00014ca80}, 0xc000118f00)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006f040, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:19 server.go:3197: http: panic serving 127.0.0.1:57857: template: index.html:11: unexpected "}" in end
+goroutine 161 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000090500})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0004dc0e0}, {0x7ff7d6be80c0, 0xc0002ee880}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0004dc0e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0004dc0e0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0004dc0e0}, 0xc0000a0700)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f2660?}, {0x7ff7d6caa370, 0xc0004dc0e0}, 0xc0000a0700)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e500, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:19 server.go:3197: http: panic serving 127.0.0.1:57858: template: index.html:11: unexpected "}" in end
+goroutine 210 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc0000903a0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0004dc000}, {0x7ff7d6be80c0, 0xc000150380}, {0xc0002ff870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0004dc000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc0004dc000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0004dc000}, 0xc0000a0000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004f4030?}, {0x7ff7d6caa370, 0xc0004dc000}, 0xc0000a0000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:20 server.go:3197: http: panic serving 127.0.0.1:57860: template: index.html:11: unexpected "}" in end
+goroutine 211 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a270})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c000}, {0x7ff7d6be80c0, 0xc0002ee380}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00014c000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c000}, 0xc0000a0200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004f4cc0?}, {0x7ff7d6caa370, 0xc00014c000}, 0xc0000a0200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e140, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:20 server.go:3197: http: panic serving 127.0.0.1:57861: template: index.html:11: unexpected "}" in end
+goroutine 184 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a3e0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00063a000}, {0x7ff7d6be80c0, 0xc000326380}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00063a000}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00063a000?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00063a000}, 0xc0000a0300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004f4ea0?}, {0x7ff7d6caa370, 0xc00063a000}, 0xc0000a0300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001840a0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:20 server.go:3197: http: panic serving 127.0.0.1:57862: template: index.html:11: unexpected "}" in end
+goroutine 189 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000090950})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0004dc2a0}, {0x7ff7d6be80c0, 0xc000150880}, {0xc0000d3870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0004dc2a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0004dc2a0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0004dc2a0}, 0xc0000a0400)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0004f5410?}, {0x7ff7d6caa370, 0xc0004dc2a0}, 0xc0000a0400)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001841e0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:21 server.go:3197: http: panic serving 127.0.0.1:57863: template: index.html:11: unexpected "}" in end
+goroutine 231 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a560})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0004dc380}, {0x7ff7d6be80c0, 0xc000150c00}, {0xc0000cf870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0004dc380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0004dc380?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0004dc380}, 0xc000118000)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f2780?}, {0x7ff7d6caa370, 0xc0004dc380}, 0xc000118000)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e000, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:21 server.go:3197: http: panic serving 127.0.0.1:57864: template: index.html:11: unexpected "}" in end
+goroutine 232 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00031a900})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c1c0}, {0x7ff7d6be80c0, 0xc0002ee900}, {0xc0000cf870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c1c0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00014c1c0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c1c0}, 0xc000118100)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f27e0?}, {0x7ff7d6caa370, 0xc00014c1c0}, 0xc000118100)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e140, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:21 server.go:3197: http: panic serving 127.0.0.1:57865: template: index.html:11: unexpected "}" in end
+goroutine 214 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00028a3c0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c2a0}, {0x7ff7d6be80c0, 0xc0002eec00}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c2a0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00014c2a0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c2a0}, 0xc000118200)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f2960?}, {0x7ff7d6caa370, 0xc00014c2a0}, 0xc000118200)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e280, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:26 server.go:3197: http: panic serving 127.0.0.1:57866: template: index.html:11: unexpected "}" in end
+goroutine 216 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc00028a760})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00063a0e0}, {0x7ff7d6be80c0, 0xc000326780}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00063a0e0}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147278?, {0x7ff7d6caa370?, 0xc00063a0e0?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00063a0e0}, 0xc0000a0500)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003048d0?}, {0x7ff7d6caa370, 0xc00063a0e0}, 0xc0000a0500)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00006e3c0, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:26 server.go:3197: http: panic serving 127.0.0.1:57867: template: index.html:11: unexpected "}" in end
+goroutine 236 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000090cc0})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc00014c380}, {0x7ff7d6be80c0, 0xc0002eee80}, {0xc0002fb870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc00014c380}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc00014c380?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc00014c380}, 0xc000118300)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001f2e10?}, {0x7ff7d6caa370, 0xc00014c380}, 0xc000118300)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00025e280, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/22 22:37:26 server.go:3197: http: panic serving 127.0.0.1:57868: template: index.html:11: unexpected "}" in end
+goroutine 249 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1825 +0xbf
+panic({0x7ff7d6ba7aa0, 0xc000091060})
+	C:/Program Files/Go/src/runtime/panic.go:844 +0x258
+html/template.Must(...)
+	C:/Program Files/Go/src/html/template/template.go:374
+myapp_v1/app/controllers.generateHTML({0x7ff7d6caa370?, 0xc0004dc460}, {0x7ff7d6be80c0, 0xc000150e80}, {0xc000227870?, 0x3, 0x0?})
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/server.go:19 +0x106
+myapp_v1/app/controllers.index({0x7ff7d6caa370, 0xc0004dc460}, 0x0?)
+	C:/Users/ari50/go/src/Myapp_v1/app/controllers/route_main.go:74 +0x2e5
+net/http.HandlerFunc.ServeHTTP(0x1814f147368?, {0x7ff7d6caa370?, 0xc0004dc460?}, 0x7ff7d66fe7c5?)
+	C:/Program Files/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x7ff7d6caa370, 0xc0004dc460}, 0xc0000a0600)
+	C:/Program Files/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000304db0?}, {0x7ff7d6caa370, 0xc0004dc460}, 0xc0000a0600)
+	C:/Program Files/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000184320, {0x7ff7d6caa5f8, 0xc0001a7740})
+	C:/Program Files/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	C:/Program Files/Go/src/net/http/server.go:3071 +0x4db
+2022/12/24 22:38:20 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:39:44 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:40:46 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:40:49 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:40:51 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:40:55 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:50:08 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:50:14 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:50:17 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 22:50:18 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 22:50:35 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:50:36 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:50:41 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:53:45 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:54:03 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 22:54:14 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 22:54:22 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 22:58:03 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 22:58:08 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 23:04:19 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:163)
+2022/12/24 23:04:43 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 23:04:48 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 23:05:29 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 23:05:36 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/24 23:06:34 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:167)
+2022/12/24 23:06:36 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:167)
+2022/12/24 23:06:36 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:167)
+2022/12/25 17:38:06 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)

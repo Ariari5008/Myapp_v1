@@ -18,15 +18,6 @@
        is-invalid {{end}}" type="text" name="name" autocomplete="off" value="{{$res.Name}}" required>
     </div>
     <div class="mb-3">
-      <label class="form-label">メールアドレス</label>
-      {{with .TemplateData.Form.Errors.Get "email"}}
-      <label class="text-danger">{{.}}</label>
-      {{end}}
-      <input class="form-control
-       {{with .TemplateData.Form.Errors.Get `email`}}
-       is-invalid {{end}}" type="email" name="email" autocomplete="off" value="{{$res.Email}}" required>
-    </div>
-    <div class="mb-3">
       <label class="form-label">パスワード</label>
       {{with .TemplateData.Form.Errors.Get "password"}}
       <label class="text-danger">{{.}}</label>

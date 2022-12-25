@@ -7,7 +7,6 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/asaskevich/govalidator"
 )
 
 type TemplateData struct {
@@ -67,28 +66,22 @@ func (f *Form) MaxLength(field string, length int, r *http.Request) bool {
 	return true
 }
 
-// 有効なメールアドレスチェック
-func (f *Form) IsEmail(field string) {
-	if !govalidator.IsEmail(f.Get(field)) {
-		f.Errors.Add(field, "無効なEmailアドレスです")
-	}
-}
 
 // 新規のメールアドレスチェック
-func (f *Form) NotSameEmail(field string, user User) {
+func (f *Form) NotSameName(field string, user User) {
 	value := f.Get(field)
-	if strings.TrimSpace(value) == user.Email {
-		f.Errors.Add(field, "このメールアドレスは既に使われています。")
+	if strings.TrimSpace(value) == user.Name {
+		f.Errors.Add(field, "この名前は既に使われています。")
 	}
 }
 
 // ログインチェック
-func (f *Form) SameEmailAndPassword(field1 string, field2 string, user User) {
+func (f *Form) SameNameAndPassword(field1 string, field2 string, user User) {
 	value1 := f.Get(field1)
 	value2 := Encrypt(f.Get(field2))
-	if strings.TrimSpace(value1) != user.Email || strings.TrimSpace(value2) != user.Password {
-		f.Errors.Add(field1, "メールアドレスかパスワードが違います。")
-		f.Errors.Add(field2, "メールアドレスかパスワードが違います。")
+	if strings.TrimSpace(value1) != user.Name || strings.TrimSpace(value2) != user.Password {
+		f.Errors.Add(field1, "名前かパスワードが違います。")
+		f.Errors.Add(field2, "名前かパスワードが違います。")
 	}
 }
 

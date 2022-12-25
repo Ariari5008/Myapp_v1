@@ -23,7 +23,6 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			// アカウント登録ページ作成
 			user := models.User{
 				Name:         r.PostFormValue("name"),
-				Email:        r.PostFormValue("email"),
 				Password:     r.PostFormValue("password"),
 				TemplateData: tmpda,
 			}
@@ -40,22 +39,19 @@ func signup(w http.ResponseWriter, r *http.Request) {
 
 		// バリデーションチェック
 		form := models.New(r.PostForm)
-		form.Required("name", "email", "password")
-		form.MinLength("email", 6, r)
+		form.Required("name", "password")
 		form.MinLength("password", 4, r)
-		form.IsEmail("email")
 		users, err := models.GetUsers()
 		if err != nil {
 			log.Println(err)
 			http.Redirect(w, r, "/404", 302)
 		}
 		for _, user := range users {
-			form.NotSameEmail("email", user)
+			form.NotSameName("name", user)
 		}
 
 		validation := models.User{
 			Name:     r.PostFormValue("name"),
-			Email:    r.PostFormValue("email"),
 			Password: r.PostFormValue("password"),
 		}
 
@@ -68,7 +64,6 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			}
 			user := models.User{
 				Name:         r.PostFormValue("name"),
-				Email:        r.PostFormValue("email"),
 				Password:     r.PostFormValue("password"),
 				TemplateData: tmpda,
 			}
@@ -78,7 +73,6 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			// ユーザー作成
 			user := models.User{
 				Name:     r.PostFormValue("name"),
-				Email:    r.PostFormValue("email"),
 				Password: r.PostFormValue("password"),
 			}
 			if err := user.CreateUser(); err != nil {
@@ -106,7 +100,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 
 		// ログインページ作成
 		user := models.User{
-			Email:        r.PostFormValue("email"),
+			Name:     r.PostFormValue("name"),
 			Password:     r.PostFormValue("password"),
 			TemplateData: tmpda,
 		}
@@ -126,19 +120,17 @@ func authenticate(w http.ResponseWriter, r *http.Request) {
 			http.Redirect(w, r, "/404", 302)
 		}
 		// バリデーションチェック
-		user, _ := models.GetUserByEmail(r.PostFormValue("email"))
+		user, _ := models.GetUserByName(r.PostFormValue("name"))
 		form := models.New(r.PostForm)
-		form.Required("email", "password")
-		form.MinLength("email", 6, r)
+		form.Required("name", "password")
 		form.MinLength("password", 4, r)
-		form.IsEmail("email")
-		form.SameEmailAndPassword("email", "password", user)
-		
+		form.SameNameAndPassword("name", "password", user)
+
 		validation := models.User{
-			Email:    r.PostFormValue("email"),
+			Name: r.PostFormValue("name"),
 			Password: r.PostFormValue("password"),
 		}
-		
+
 		if !form.Valid() {
 			data := make(map[string]interface{})
 			data["validation"] = validation
@@ -147,28 +139,27 @@ func authenticate(w http.ResponseWriter, r *http.Request) {
 				Data: data,
 			}
 			user := models.User{
-				Email:        r.PostFormValue("email"),
 				Password:     r.PostFormValue("password"),
 				TemplateData: tmpda,
 			}
 			generateHTML(w, user, "layout", "top_navbar", "login")
 		}
-		
-		if user.Email == r.PostFormValue("email") && user.Password == models.Encrypt(r.PostFormValue("password")) {
+
+		if user.Password  == models.Encrypt(r.PostFormValue("password")) {
 			// セッション作成
 			user_session, err := user.CreateUser_session()
 			if err != nil {
 				log.Println(err)
 				http.Redirect(w, r, "/404", 302)
 			}
-	
+
 			cookie := http.Cookie{
 				Name:     "_cookie",
 				Value:    user_session.UUID,
 				HttpOnly: true,
 			}
 			http.SetCookie(w, &cookie)
-	
+
 			http.Redirect(w, r, "/", 302)
 		} else {
 			http.Redirect(w, r, "/login", 302)

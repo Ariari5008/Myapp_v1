@@ -4,7 +4,6 @@
 <h1>ホームページ</h1>
 
 <p>[<a href="/topics/new">作成</a>]</p>
-
 <hr>
 {{range .Topics}}
 <form role="form" action="/browse" method="post">
@@ -14,7 +13,8 @@
         <a href="/topics/comment/{{.ID}}"><textarea type="text" readonly class="form-control-plaintext" id="topic"
             name="topic" rows="3">{{.Content}}</textarea></a>
         <input class="form-control" name="topic_id" id="topic_id" placeholder="topic_id" value="{{.ID}}" hidden>
-        <h5 class="text-right"><span name="likes" class="badge bg-info text-dark">&#128077;いいね数<span class="pl-2">{{.Likes}}</span></span></h5>
+        <h5 class="text-right"><span name="likes" class="badge bg-info text-dark">&#128077;いいね数<span
+              class="pl-2">{{.Likes}}</span></span></h5>
       </div>
     </div>
     <div class="border col-3">
@@ -26,7 +26,6 @@
         </select>
       </div>
     </div>
-    <br>
     <br>
     <button class="btn btn-lg btn-primary pull-right" type="submit">送信</button>
   </div>

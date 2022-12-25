@@ -34,7 +34,6 @@ func init() {
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		uuid STRING NOT NULL UNIQUE,
 		name STRING,
-		email STRING,
 		password STRING,
 		created_at DATETIME)`, tabalNameUser)
 
@@ -56,7 +55,6 @@ func init() {
 		IF NOT EXISTS %s(
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
 			uuid STRING NOT NULL UNIQUE,
-			email STRING,
 			user_id INTEGER,
 			created_at DATETIME)`, tableNameUser_session)
 

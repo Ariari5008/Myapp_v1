@@ -9,7 +9,6 @@ import (
 	"strconv"
 )
 
-
 func topicNew(w http.ResponseWriter, r *http.Request) {
 	// セッション確認
 	_, err := user_session(w, r)
@@ -79,7 +78,7 @@ func topicSave(w http.ResponseWriter, r *http.Request) {
 				}
 				// トピック作成
 				content := r.PostFormValue("content")
-				if err := user.CreateTopic(content, 0, 0); err != nil {
+				if err := user.CreateTopic(content, 0, 1); err != nil {
 					log.Println(err)
 					http.Redirect(w, r, "/404", 302)
 				}

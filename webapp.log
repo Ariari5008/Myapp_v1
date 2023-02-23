@@ -26068,3 +26068,8 @@ created by net/http.(*Server).Serve
 2022/12/24 23:06:36 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:167)
 2022/12/24 23:06:36 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:167)
 2022/12/25 17:38:06 server.go:3197: http: superfluous response.WriteHeader call from myapp_v1/app/controllers.authenticate (route_auth.go:165)
+2022/12/26 22:31:32 topics.go:196: no such column: id
+2022/12/26 22:35:17 topics.go:196: no such column: id
+2022/12/26 22:45:48 topics.go:196: no such column: id
+2022/12/26 22:46:18 topics.go:196: no such column: id
+2022/12/26 22:50:59 topics.go:196: no such column: id

@@ -18,8 +18,9 @@ var err error
 
 const (
 	tabalNameUser         = "users"
-	tableNameTopic        = "topics"
 	tableNameUser_session = "user_sessions"
+	tableNameTopic        = "topics"
+	tableNameLikeUser     = "like_user"
 	tableNameComment      = "comments"
 )
 
